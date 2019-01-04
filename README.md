@@ -1,6 +1,17 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
    
+### Introduction
+The ego-vehicle can run at least 4.32 miles without incident.  And it should not exceed the speed limit 50mph, an acceleration of 10 m/s^2 and a jerk of 20 m/s^3. It also change lane without collision when a car in front of ego-car is close less than 30m.
+
+I started a code from Aaron's code in 'Project Q&A'.  With this code, ego-vehicle already keep its lane and change lanes without the exceeding speed, an maximum of acceleration and jerk.  It is only missing checking next lane when it changes a lane.
+
+### Implemantation
+I added a function called 'isCarClose()', which checks if specified lane has a car between 30m ahead and 30m behind.  And I called 'isCarClose()' when ego-vehicle tries to change lanes.
+
+1. highway map
+I ploted X, Y from highway_map.csv to make sure that X, Y is global coordinate.
+![Alt](pictures/highway_ma_xy.png "highway map XY")
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
 
