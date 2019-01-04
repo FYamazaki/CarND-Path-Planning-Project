@@ -7,14 +7,16 @@ The ego-vehicle can run at least 4.32 miles without incident.  And it should not
 I started a code from Aaron's code in 'Project Q&A'.  With this code, ego-vehicle already keep its lane and change lanes without the exceeding speed, an maximum of acceleration and jerk.  It is only missing checking next lane when it changes a lane.
 
 ### Implemantation
-I added a function called 'isCarClose()', which checks if specified lane has a car between 30m ahead and 30m behind.  And I called 'isCarClose()' when ego-vehicle tries to change lanes.
+I added a function called ['isCarClose()'][1], which checks if specified lane has a car between 30m ahead and 30m behind.  And I called ['isCarClose()'][2] when ego-vehicle tries to change lanes.
+[1]: src/main.cc#175
+[2]: src/main.cc#312
 
 1. highway map
-I ploted X, Y from highway_map.csv to make sure that X, Y is global coordinate.
+I plotted X, Y from highway_map.csv to make sure that X, Y is global coordinate.
 ![Alt](pictures/highway_ma_xy.png "highway map XY")
 
 ### Discussion
-I wanted to use a cost function and finite state machine.  This is a snapshot after 10min. drive.
+I wanted to use a cost function and finite state machine.  But this code works well.  The below is a snapshot after 10min.
 ![Alt](pictures/simulator.png "simulator after 10min")
 
 ### Simulator.
