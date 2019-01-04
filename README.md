@@ -4,19 +4,21 @@ Self-Driving Car Engineer Nanodegree Program
 ### Introduction
 The ego-vehicle can run at least 4.32 miles without incident.  And it should not exceed the speed limit 50mph, an acceleration of 10 m/s^2 and a jerk of 20 m/s^3. It also change lane without collision when a car in front of ego-car is close less than 30m.
 
-I started a code from Aaron's code in 'Project Q&A'.  With this code, ego-vehicle already keep its lane and change lanes without the exceeding speed, an maximum of acceleration and jerk.  It is only missing checking next lane when it changes a lane.
+I started a code from Aaron's code in 'Project Q&A'.  With this code, ego-vehicle already wokrs keeping its lane and changing lanes without the exceeding speed, an maximum of acceleration and jerk.  It is only missing checking next lane when it changes a lane.
 
 ### Implemantation
-I added a function called ['isCarClose()'][1], which checks if specified lane has a car between 30m ahead and 30m behind.  And I called ['isCarClose()'][2] when ego-vehicle tries to change lanes.
-[1]: src/main.cc#175
-[2]: src/main.cc#312
+1. I added Car class (src/car.h and src/car.cc) to represent cars from sensor fusion, which makes easier to check vehicles around ego-vehicles.
 
-1. highway map
+2. I added a function called 'isCarClose()'(src/main.cc:Line:175), which checks if specified lane has a car between 30m ahead and 30m behind.
+
+3. I called 'isCarClose()'(src/main.cc:Line:312) when ego-vehicle tries to change lanes.
+
+### highway map
 I plotted X, Y from highway_map.csv to make sure that X, Y is global coordinate.
 ![Alt](pictures/highway_ma_xy.png "highway map XY")
 
 ### Discussion
-I wanted to use a cost function and finite state machine.  But this code works well.  The below is a snapshot after 10min.
+This code works well.  The below is a snapshot after 10min.  But I wanted to use a cost function and finite state machine.
 ![Alt](pictures/simulator.png "simulator after 10min")
 
 ### Simulator.
