@@ -12,6 +12,11 @@ I added a function called 'isCarClose()', which checks if specified lane has a c
 1. highway map
 I ploted X, Y from highway_map.csv to make sure that X, Y is global coordinate.
 ![Alt](pictures/highway_ma_xy.png "highway map XY")
+
+### Discussion
+I wanted to use a cost function and finite state machine.  This is a snapshot after 10min. drive.
+![Alt](pictures/simulator.png "simulator after 10min")
+
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
 
